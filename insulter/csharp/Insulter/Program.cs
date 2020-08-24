@@ -26,13 +26,12 @@ namespace Insulter
 
             while (indexes.Count < 3)
             {
-                int candidate = getRandomInt(0, insults.Count - 1);
+                int candidate = new Random().Next(0, insults.Count);
                 if (!indexes.Contains(candidate))
                 {
                     indexes.Add(candidate);
                 }
             };
-
             for (int i = 0; i < indexes.Count; i++)
             {
                 int index = indexes[i];
@@ -40,5 +39,6 @@ namespace Insulter
             }
 
         }
+
     }
 }
